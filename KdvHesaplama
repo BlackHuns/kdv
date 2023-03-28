@@ -1,0 +1,29 @@
+import java.util.Scanner;
+public class KdvHesaplama {
+    public static void main(String[] args){
+
+        System.out.println("******KDV Hesaplama Programı******");
+        System.out.println("Ürün fiyatını Giriniz: ");
+        Scanner tara = new Scanner(System.in);
+        double price = tara.nextDouble();
+        double taxPrice;
+        double totalPrice;
+        final double taxRate0 = 0.18;
+        final double taxRate1 = 0.08;
+        if (price < 1001){
+            taxPrice = price * taxRate0;
+            totalPrice = price + taxPrice;
+            System.out.println("Ürün Fiyatı:"+ price);
+            System.out.println("KDV Tutarı: " + taxPrice);
+            System.out.println("Toplam Tutar: " + totalPrice);
+        } else{
+            taxPrice = price * taxRate1;
+            totalPrice = price + taxPrice;
+            System.out.println("Ürün Fiyatı:"+ price);
+            System.out.println("KDV Tutarı: " + taxPrice);
+            System.out.println("Toplam Tutar: " + totalPrice);
+        }
+
+    }
+
+}
